@@ -8,6 +8,9 @@ MAC:
 https://macvendors.com/
 
 TODO:
+1. Прислать ссылку на репу;
+
+TODO:
 1. Почитать про NAT;
 2. Скачать и установить анализатор протоколов Wireshark:https://www.wireshark.org/
    WinPCAP ставить обязательно, НО USB-PCAP НЕ НУЖЕН;
