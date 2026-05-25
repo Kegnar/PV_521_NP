@@ -46,9 +46,9 @@ BOOL CALLBACK DlgProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 			{
 				SendMessage(hIPaddress, IPM_GETADDRESS, 0, (LPARAM)&dwIPaddress);
 				//std::cout << FIRST_IPADDRESS(dwIPaddress) << std::endl;
-				if (FIRST_IPADDRESS(dwIPaddress) < 128)dwIPmask = 0xFF000000;// , dwIPprefix = 8;
-				else if (FIRST_IPADDRESS(dwIPaddress) < 192)dwIPmask = 0xFFFF0000;// , dwIPprefix = 16;
-				else if (FIRST_IPADDRESS(dwIPaddress) < 224)dwIPmask = 0xFFFFFF00;// , dwIPprefix = 24;
+				if (FIRST_IPADDRESS(dwIPaddress) < 128)dwIPmask = 0xFF000000, dwIPprefix = 8;
+				else if (FIRST_IPADDRESS(dwIPaddress) < 192)dwIPmask = 0xFFFF0000 , dwIPprefix = 16;
+				else if (FIRST_IPADDRESS(dwIPaddress) < 224)dwIPmask = 0xFFFFFF00 , dwIPprefix = 24;
 				//std::cout << dwIPmask << std::endl;
 				SendMessage(hIPmask, IPM_SETADDRESS, 0, dwIPmask);
 				CHAR szIPprefix[3] = {};
@@ -74,7 +74,7 @@ BOOL CALLBACK DlgProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 			}
 		}
 		break;
-		/*case IDC_EDIT_PREFIX:
+		case IDC_EDIT_PREFIX:
 		{
 			DWORD dwIPaddress = 0;
 			DWORD dwIPprefix = 0;
@@ -90,7 +90,7 @@ BOOL CALLBACK DlgProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 				SendMessage(hIPmask, IPM_SETADDRESS, 0, dwIPmask);
 			}
 		}
-			break;*/
+			break;
 		case IDOK:
 			break;
 		case IDCANCEL:EndDialog(hwnd, 0);
@@ -100,7 +100,9 @@ BOOL CALLBACK DlgProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 	case WM_NOTIFY:
 	{
 		NMHDR* p_nmhdr = (NMHDR*)lParam;
-		if (p_nmhdr->idFrom == IDC_IP_MASK)
+		std::cout << p_nmhdr->idFrom << "\t" << wParam << std::endl;
+		if (wParam == IDC_IP_MASK || wParam == IDC_IP_ADDRESS)
+		//if (p_nmhdr->hwndFrom == GetDlgItem(hwnd, IDC_IP_MASK))
 		{
 			DWORD dwIPmask = 0;
 			DWORD dwIPprefix = 0;
