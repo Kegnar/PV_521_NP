@@ -18,6 +18,9 @@ https://learn.microsoft.com/ru-ru/message-passing-interface/microsoft-mpi
 https://learn.microsoft.com/en-us/cpp/parallel/openmp/openmp-in-visual-cpp?view=msvc-170
 
 TODO:
+1. Проверить Mutex при помощи функции CreateMutex();
+
+DONE:
 1. Реализовать чат на C#, подобный чату на WinSOCK;
 	https://learn.microsoft.com/en-us/dotnet/fundamentals/networking/sockets/socket-services
 
