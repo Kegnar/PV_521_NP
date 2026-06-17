@@ -13,9 +13,22 @@ https://www.ixbt.com/nw/netcraze-ultra-nc-1812-review.html
 MAC:
 https://macvendors.com/
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Parallel programming:
+https://learn.microsoft.com/en-us/cpp/parallel/parallel-programming-in-visual-cpp?view=msvc-170
+https://www.openmp.org/resources/openmp-books/
+https://learn.microsoft.com/en-us/message-passing-interface/mpi-allgather-function
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 Multithreading:
 https://learn.microsoft.com/ru-ru/message-passing-interface/microsoft-mpi
 https://learn.microsoft.com/en-us/cpp/parallel/openmp/openmp-in-visual-cpp?view=msvc-170
+
+TOREAD:
+1. https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf
+2. https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-Russian.pdf
 
 TODO:
 1. Проверить Mutex при помощи функции CreateMutex();
